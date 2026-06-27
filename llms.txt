@@ -1,0 +1,17 @@
+# Aries Ballroom Dance Club for Young Adults Website
+# 社交ダンスヤングサークル「アリエス」 Website 情報
+
+このファイルは本ウェブサイトとサークルの基本情報を示すメタデータです。
+
+## Webサイト概要
+- **名称**: 社交ダンスサークル Aries (アリエス)
+- **特徴**: 広島で人気の社交ダンスヤングサークル
+- **対象**: 20代〜30代の社会人（初心者歓迎）
+
+## 基本情報
+- **活動日時**: 毎週金曜日 19:30 〜 21:30
+- **活動場所**: カワサキダンススクール
+- **参加費**: 1回 2,000円
+- **SNS/リンク**:
+  - Instagram: https://www.instagram.com/aries.socialdance/
+  - 過去ブログ: http://blog.livedoor.jp/ariesdance/

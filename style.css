@@ -1,0 +1,506 @@
+/* 
+  Aries Social Dance Circle - Custom CSS
+  Modern, elegant, and dynamic design
+*/
+
+:root {
+  /* Colors */
+  --primary-color: #6a11cb; /* Elegant purple */
+  --secondary-color: #2575fc; /* Dynamic blue */
+  --text-main: #333333;
+  --text-light: #666666;
+  --bg-color: #ffffff;
+  --bg-light: #f8f9fa;
+  --border-color: #eaeaea;
+  
+  /* Typography */
+  --font-base: 'Noto Sans JP', sans-serif;
+  --font-logo: 'Outfit', sans-serif;
+  
+  /* Layout & Design Tokens */
+  --max-width: 1000px;
+  --border-radius: 12px;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset & BaseStyles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--text-main);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Typography Utilities */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: var(--font-logo);
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-list a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.nav-list a:hover {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(106, 17, 203, 0.4);
+}
+
+.btn-outline-small {
+  padding: 8px 16px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.btn-outline-small:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.link-with-icon {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.link-with-icon:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 60px; /* Offset for fixed header */
+  overflow: hidden;
+}
+
+/* The background stays visually interesting if an image is missing */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(248, 241, 241, 0.9), rgba(230, 233, 240, 0.9));
+  z-index: -2;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(106, 17, 203, 0.05) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.hero-content {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+}
+
+/* About Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Schedule Section */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.schedule-card {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+}
+
+.schedule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.schedule-date {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+}
+
+.schedule-date .month { font-size: 0.9rem; }
+.schedule-date .day { font-size: 1.8rem; font-weight: 700; line-height: 1; margin: 4px 0; font-family: var(--font-logo); }
+.schedule-date .dow { font-size: 0.9rem; }
+
+.schedule-info {
+  padding: 24px;
+  flex: 1;
+}
+
+.schedule-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.schedule-info p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.schedule-info p::before {
+  content: '•';
+  color: var(--primary-color);
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* Info Section (Table) */
+.info-table-wrapper {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table th, .info-table td {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.info-table tr:last-child th, .info-table tr:last-child td {
+  border-bottom: none;
+}
+
+.info-table th {
+  background-color: #fafafa;
+  font-weight: 600;
+  width: 30%;
+  color: #444;
+}
+
+/* Google Calendar Wrapper */
+.gcal-wrapper {
+  position: relative;
+  padding-bottom: 75%; /* アスペクト比 4:3 */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  margin-top: 20px;
+  background-color: white;
+}
+
+.gcal-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* FAQ Section */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.faq-question {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.faq-answer {
+  color: var(--text-light);
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 40px;
+}
+
+.footer-brand h2 {
+  font-family: var(--font-logo);
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.footer-brand p {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #ccc;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav {
+    display: none; /* Hide nav links on small mobile for simplicity */
+  }
+  
+  .info-table th, .info-table td {
+    display: block;
+    width: 100%;
+  }
+  
+  .info-table th {
+    padding-bottom: 5px;
+  }
+  
+  .info-table td {
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .gcal-wrapper {
+    padding-bottom: 100%; /* スマホではより長方形(正方形寄り)に見やすく */
+  }
+}

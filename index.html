@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="社交ダンスヤングサークル「アリエス」の公式Webサイト。日々の活動、スケジュール、参加情報をご紹介します。アリエスで、一緒に踊りませんか？">
+    <title>社交ダンスサークル Aries (アリエス)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">Aries</div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#about">Ariesについて</a></li>
+                    <li><a href="index.html#schedule">スケジュール</a></li>
+                    <li><a href="index.html#info">サークル情報</a></li>
+                    <li><a href="index.html#compe">競技会情報</a></li>
+                    <li><a href="index.html#faq">よくある質問</a></li>
+                </ul>
+            </nav>
+            <a href="https://www.instagram.com/aries.socialdance/" target="_blank"
+                class="btn-outline-small">Instagram</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">アリエスで、踊ろう</h1>
+            <p class="hero-subtitle">初心者から経験者まで、みんなで楽しむ<br>社交ダンスヤングサークル</p>
+            <a href="#schedule" class="btn-primary">スケジュールを見る</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Ariesについて</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>踊る楽しさを、みんなで共有する場所</h3>
+                    <p>アリエスは、20代〜30代を中心とした若者向けの社交ダンスサークルです。<br>全くの未経験から始める方も多く、基礎から丁寧に教え合いながら、日々ワイワイと練習しています。</p>
+                    <p>日々の活発な活動の様子は、ぜひInstagramを覗いてみてください。私たちがどんな雰囲気で踊っているかを感じていただけるはずです！</p>
+                    <a href="https://www.instagram.com/aries.socialdance/" target="_blank"
+                        class="link-with-icon">日々の活動をInstagramで見る &rarr;</a>
+                </div>
+                <div class="about-image">
+                    <!-- Placeholder for actual dance image -->
+                    <div class="image-placeholder">
+                        <span>Aries Activity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">スケジュール</h2>
+            <p class="section-desc">見学、体験はいつでも大歓迎です。事前にお気軽にご連絡ください。<br>※予定は変更になる場合があります。</p>
+
+            <div class="schedule-grid">
+                <!-- Schedule Card 1 -->
+                <div class="schedule-card">
+                    <div class="schedule-date">
+                        <span class="month"></span>
+                        <span class="day"></span>
+                        <span class="dow">(金)</span>
+                    </div>
+                    <div class="schedule-info">
+                        <h3>通常練習 (スタンダード/ラテン)</h3>
+                        <p class="time">19:30 - 21:30</p>
+                        <p class="location">カワサキダンススクール FFビル 6F</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Section -->
+    <section id="info" class="section">
+        <div class="container">
+            <h2 class="section-title">サークル情報</h2>
+            <div class="info-table-wrapper">
+                <table class="info-table">
+                    <tbody>
+                        <tr>
+                            <th>対象年齢</th>
+                            <td>20代〜30代の社会人・学生 (ヤングサークル)</td>
+                        </tr>
+                        <tr>
+                            <th>活動日時</th>
+                            <td>毎週金曜日 19:30 〜 21:30 頃</td>
+                        </tr>
+                        <tr>
+                            <th>活動場所</th>
+                            <td>カワサキダンススクール</td>
+                        </tr>
+                        <tr>
+                            <th>参加費</th>
+                            <td>1回 2,000円 （入会金なし・体験無料など要調整）</td>
+                        </tr>
+                        <tr>
+                            <th>持ち物</th>
+                            <td>動きやすい服装、室内用シューズ（ダンスシューズがない場合は体育館シューズ等）、飲み物</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competition Section -->
+    <section id="compe" class="section">
+        <div class="container">
+            <h2 class="section-title">競技会情報</h2>
+            <p class="section-desc">JBDF、JDC、JDSFの競技開催予定。</p>
+            <div class="gcal-wrapper" style="max-width: 800px; margin: 0 auto;">
+                <!-- 複数カレンダーの統合（showCalendars=1, srcを2つ指定, 色分けcolorパラメータ追加） -->
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showPrint=0&showTabs=1&showCalendars=1&hl=ja&src=aries.socialdance%40gmail.com&src=cd6e02ea814ddb6a82e7aaa4e585a9bcb9267b8b7f5db2fd4f25c9e13fb4f18d%40group.calendar.google.com&color=%23039BE5&color=%23D50000"
+                    style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Q. 全くの初心者ですが大丈夫ですか？</div>
+                    <div class="faq-answer">もちろん大丈夫です！メンバーの多くが未経験からスタートしています。先輩たちが立ち方からステップまで優しくサポートします。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q. 一人で参加しても浮きませんか？</div>
+                    <div class="faq-answer">一人で参加される方がほとんどですのでご安心ください。練習の中で色々な人と組んで踊るので、自然と仲良くなれますよ。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q. 見学や体験をしたいのですが、どうすればいいですか？</div>
+                    <div class="faq-answer">Instagramのダイレクトメッセージ(DM)から、「見学希望」とご連絡ください。担当者から折り返し詳細をご案内いたします。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>Aries</h2>
+                <p>Social Dance Young Circle</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/aries.socialdance/" target="_blank">Instagram
+                    (@aries.socialdance)</a>
+                <a href="http://blog.livedoor.jp/ariesdance/" target="_blank">2020年以前のブログ</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 社交ダンスサークル Aries. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
