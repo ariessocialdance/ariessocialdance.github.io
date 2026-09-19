@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="社交ダンスヤングサークル「アリエス」の公式Webサイト。日々の活動、スケジュール、参加情報をご紹介します。アリエスで、一緒に踊りませんか？">
+    <meta name="description" content="社交ダンスヤングサークル「アリエス」の公式Webサイト。活動内容、スケジュール、競技会情報カレンダーをご紹介します。">
     <title>社交ダンスサークル Aries (アリエス)</title>
 
     <!-- Google Fonts -->
@@ -23,18 +23,23 @@
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <div class="logo">Aries</div>
-            <nav class="nav">
+            <a href="index.html" class="logo">Aries</a>
+            <nav class="nav" id="navMenu">
                 <ul class="nav-list">
                     <li><a href="index.html#about">Ariesについて</a></li>
-                    <li><a href="index.html#schedule">スケジュール</a></li>
-                    <li><a href="index.html#info">サークル情報</a></li>
-                    <li><a href="index.html#compe">競技会情報</a></li>
-                    <li><a href="index.html#faq">よくある質問</a></li>
+                    <li><a href="schedule.html">スケジュール</a></li>
+                    <li><a href="info.html">サークル情報</a></li>
+                    <li><a href="compe.html">競技会情報</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
                 </ul>
             </nav>
-            <a href="https://www.instagram.com/aries.socialdance/" target="_blank"
+            <a href="https://www.instagram.com/aries.socialdance/" target="_blank" rel="noopener noreferrer"
                 class="btn-outline-small">Instagram</a>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="メニューを開く" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -44,7 +49,12 @@
         <div class="hero-content">
             <h1 class="hero-title">アリエスで踊ろう</h1>
             <p class="hero-subtitle">初心者から経験者まで、みんなで楽しむ<br>社交ダンスヤングサークル</p>
-            <a href="#schedule" class="btn-primary">スケジュールを見る</a>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="schedule.html" class="btn-primary">スケジュールを見る</a>
+                <a href="compe.html" class="btn-cal-add"
+                    style="background: rgba(255,255,255,0.9); border-color: var(--primary-color); color: var(--primary-color);">🏆
+                    競技会カレンダー</a>
+            </div>
         </div>
     </section>
 
@@ -55,9 +65,9 @@
             <div class="about-grid">
                 <div class="about-text">
                     <h3>踊る楽しさを、みんなで共有する場所</h3>
-                    <p>アリエスは、20代〜30代を中心とした若者向けの社交ダンスサークルです。<br>全くの未経験から始める方も多く、基礎から丁寧に教え合いながら、日々ワイワイと練習しています。</p>
+                    <p>アリエスは、広島市内で活動する20代〜30代を中心とした若者向けの社交ダンスサークルです。<br>全くの未経験から始める方も多く、基礎から丁寧に教え合いながら、日々楽しく練習しています。</p>
                     <p>日々の活発な活動の様子は、ぜひInstagramを覗いてみてください。私たちがどんな雰囲気で踊っているかを感じていただけるはずです！</p>
-                    <a href="https://www.instagram.com/aries.socialdance/" target="_blank"
+                    <a href="https://www.instagram.com/aries.socialdance/" target="_blank" rel="noopener noreferrer"
                         class="link-with-icon">日々の活動をInstagramで見る &rarr;</a>
                 </div>
                 <div class="about-image">
@@ -70,93 +80,47 @@
         </div>
     </section>
 
-    <!-- Schedule Section -->
-    <section id="schedule" class="section bg-light">
+    <!-- Content Navigation Cards Section -->
+    <section class="section bg-light">
         <div class="container">
-            <h2 class="section-title">スケジュール</h2>
-            <p class="section-desc">見学、体験はいつでも大歓迎です。事前にお気軽にご連絡ください。<br>※予定は変更になる場合があります。</p>
+            <h2 class="section-title">メニュー</h2>
+            <p class="section-desc">アリエスの活動内容やスケジュール、大会・競技会情報などの詳細ページです。</p>
 
-            <div class="schedule-grid">
-                <!-- Schedule Card 1 -->
-                <div class="schedule-card">
-                    <div class="schedule-date">
-                        <span class="month"></span>
-                        <span class="day"></span>
-                        <span class="dow">(金)</span>
+            <div class="features-grid">
+                <!-- Card 1: Schedule -->
+                <div class="feature-card">
+                    <div>
+                        <h3>📅 スケジュール</h3>
+                        <p>直近の練習日程や開催場所をご確認いただけます。見学・体験はいつでも歓迎です。</p>
                     </div>
-                    <div class="schedule-info">
-                        <h3>通常練習 (スタンダード/ラテン)</h3>
-                        <p class="time">19:30 - 21:30</p>
-                        <p class="location">カワサキダンススクール FFビル 6F</p>
+                    <a href="schedule.html" class="link-with-icon">日程を見る &rarr;</a>
+                </div>
+
+                <!-- Card 2: Circle Info -->
+                <div class="feature-card">
+                    <div>
+                        <h3>ℹ️ サークル情報</h3>
+                        <p>対象年齢、活動日時、アクセス、参加費や持ち物について詳しくご案内します。</p>
                     </div>
+                    <a href="info.html" class="link-with-icon">詳細を見る &rarr;</a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Information Section -->
-    <section id="info" class="section">
-        <div class="container">
-            <h2 class="section-title">サークル情報</h2>
-            <div class="info-table-wrapper">
-                <table class="info-table">
-                    <tbody>
-                        <tr>
-                            <th>対象年齢</th>
-                            <td>20代〜30代の社会人・学生 (ヤングサークル)</td>
-                        </tr>
-                        <tr>
-                            <th>活動日時</th>
-                            <td>毎週金曜日 19:30 〜 21:30 頃</td>
-                        </tr>
-                        <tr>
-                            <th>活動場所</th>
-                            <td>カワサキダンススクール</td>
-                        </tr>
-                        <tr>
-                            <th>参加費</th>
-                            <td>1回 2,000円 （入会金なし・体験無料など要調整）</td>
-                        </tr>
-                        <tr>
-                            <th>持ち物</th>
-                            <td>動きやすい服装、室内用シューズ（ダンスシューズがない場合は体育館シューズ等）、飲み物</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Competition Section -->
-    <section id="compe" class="section">
-        <div class="container">
-            <h2 class="section-title">競技会情報</h2>
-            <p class="section-desc">JBDF、JDC、JDSFの競技開催予定。</p>
-            <div class="gcal-wrapper" style="max-width: 800px; margin: 0 auto;">
-                <!-- 複数カレンダーの統合（showCalendars=1, srcを2つ指定, 色分けcolorパラメータ追加） -->
-                <iframe
-                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showPrint=0&showTabs=1&showCalendars=1&hl=ja&src=aries.socialdance%40gmail.com&src=cd6e02ea814ddb6a82e7aaa4e585a9bcb9267b8b7f5db2fd4f25c9e13fb4f18d%40group.calendar.google.com&color=%23039BE5&color=%23D50000"
-                    style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">よくある質問</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">Q. 全くの初心者ですが大丈夫ですか？</div>
-                    <div class="faq-answer">もちろん大丈夫です！メンバーの多くが未経験からスタートしています。先輩たちが立ち方からステップまで優しくサポートします。</div>
+                <!-- Card 3: Competition Info -->
+                <div class="feature-card" style="border-top: 4px solid var(--secondary-color);">
+                    <div>
+                        <h3>🏆 競技会情報</h3>
+                        <p>JBDF、JDC、JDSFなど、各種大会・競技会の統合カレンダーです。競技ダンサーの方も必見の情報です。</p>
+                    </div>
+                    <a href="compe.html" class="link-with-icon">競技会日程を見る &rarr;</a>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">Q. 一人で参加しても浮きませんか？</div>
-                    <div class="faq-answer">一人で参加される方がほとんどですのでご安心ください。練習の中で色々な人と組んで踊るので、自然と仲良くなれますよ。</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Q. 見学や体験をしたいのですが、どうすればいいですか？</div>
-                    <div class="faq-answer">Instagramのダイレクトメッセージ(DM)から、「見学希望」とご連絡ください。担当者から折り返し詳細をご案内いたします。</div>
+
+                <!-- Card 4: FAQ -->
+                <div class="feature-card">
+                    <div>
+                        <h3>❓ よくある質問</h3>
+                        <p>初心者の方や一人参加の方から寄せられる疑問・質問にお答えしています。</p>
+                    </div>
+                    <a href="faq.html" class="link-with-icon">FAQを見る &rarr;</a>
                 </div>
             </div>
         </div>
@@ -170,9 +134,10 @@
                 <p>Social Dance Young Circle</p>
             </div>
             <div class="footer-links">
-                <a href="https://www.instagram.com/aries.socialdance/" target="_blank">Instagram
+                <a href="https://www.instagram.com/aries.socialdance/" target="_blank"
+                    rel="noopener noreferrer">Instagram
                     (@aries.socialdance)</a>
-                <a href="http://blog.livedoor.jp/ariesdance/" target="_blank">2020年以前のブログ</a>
+                <a href="http://blog.livedoor.jp/ariesdance/" target="_blank" rel="noopener noreferrer">2020年以前のブログ</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -180,6 +145,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
